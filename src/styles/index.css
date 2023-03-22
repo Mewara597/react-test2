@@ -1,0 +1,7 @@
+.card-div {
+  background-color: aliceblue;
+  border: 2px solid black;
+  max-width: 200px;
+  min-height: 200px;
+  margin: 8px;
+}
