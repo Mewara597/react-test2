@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     users.length === 0 && dispatch(fetchPosts());
-  }, [users]);
+  }, [users]); //eslint-disable-line
 
   return (
     <div className="App">
