@@ -17,7 +17,7 @@ export const counterSlice = createSlice({
     builder.addCase(fetchPosts.fulfilled, (state, action) => {
       // We can directly add the new post object to our posts array
       console.log(state, "this is state");
-      state.length == 0 && state.push(...action.payload);
+      state.length === 0 && state.push(...action.payload);
     });
   },
 });
