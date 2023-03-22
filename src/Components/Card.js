@@ -1,5 +1,5 @@
-import { memo, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { memo } from "react";
+import { useSelector } from "react-redux";
 import Nav from "./Nav";
 // import { fetchPosts } from "../feature/counterSlice";
 

@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import Card from "../Components/Card";
 
 export const counterSlice = createSlice({
   name: "album",
