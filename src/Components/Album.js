@@ -1,7 +1,6 @@
 // import axios from "axios";
 import axios from "axios";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setpost } from "../feature/counterSlice";
 
@@ -9,7 +8,7 @@ export default function Album() {
   let obj = {};
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const users = useSelector((state) => state);
+  // const users = useSelector((state) => state);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

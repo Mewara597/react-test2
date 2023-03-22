@@ -3,7 +3,6 @@
 import Card from "./Components/Card";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Album from "./Components/Album";
-import Nav from "./Components/Nav";
 // import { useSelector, useDispatch } from "react-redux";
 import { fetchPosts } from "./feature/counterSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,7 +13,7 @@ function App() {
   const users = useSelector((state) => state);
 
   useEffect(() => {
-    users.length == 0 && dispatch(fetchPosts());
+    users.length === 0 && dispatch(fetchPosts());
   }, [users]);
 
   return (
