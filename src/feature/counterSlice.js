@@ -13,14 +13,14 @@ export const counterSlice = createSlice({
     },
     deleteState: (state, action) => {
       state.forEach((a,index)=>{
-        if(a.id== action.payload){
+        if(a.id=== action.payload){
           state.splice(index, 1);
         }
       })
     },
     editState: (state, action) => {
       state.forEach((a,index)=>{
-        if(a.id== action.payload){
+        if(a.id=== action.payload){
           React.createElement('<input type="text" placeholder="Enter value here"> </input>')
         }
       })
