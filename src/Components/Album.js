@@ -45,10 +45,9 @@ export default function Album() {
           <input
             id="title"
             placeholder="enter title here "
-            value="this is dummy"
           />
-          <input id="userId" placeholder="enter userId here" value="121" />
-          <input id="id" placeholder="enter Id here" value="121" />
+          <input id="userId" placeholder="enter userId here"  />
+          <input id="id" placeholder="enter Id here"  />
           <input type="submit" className="btn btn-primary" />
         </div>
       </div>

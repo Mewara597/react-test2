@@ -5,21 +5,15 @@ export default function Nav() {
     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
       <div className="container" to="/">
         <Link className="navbar-brand">Album</Link>
-        {/* <button
-          className="navbar-toggler bg-white"
-          data-bs-toggle="collapse"
-          data-bs-target="#nav"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button> */}
+    
         <div className="collapse navbar-collapse" id="nav">
           <ul className="navbar-nav">
-            <li className="nav-item">
+            <li className="nav-item md-5" >
               <Link to="/" className="nav-Link" style={{ color: "white" }}>
                 Home
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" style={{'margin': '0 20px'}}>
               <Link className="nav-Link" style={{ color: "white" }} to="/add">
                 Add album
               </Link>

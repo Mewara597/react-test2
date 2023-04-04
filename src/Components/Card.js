@@ -1,20 +1,29 @@
 import { memo } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Nav from "./Nav";
+import { editPost, updatePost } from "../feature/counterSlice";
 // import { fetchPosts } from "../feature/counterSlice";
 
 function Card() {
-  // console.log(props);
   const users = useSelector((state) => state);
+  // let dataArr = users.reverse()
+  const dispatch = useDispatch();
 
-  console.log(users);
+
+  function handleDelete(id){
+   dispatch(updatePost(id))
+  }
+  function handleEdit(id){
+    dispatch(editPost(id))
+  }
 
   return (
     <>
       <Nav />
 
       <div className="card-group">
-        {users.map((obj, index) => (
+        
+        { users.map((obj, index) => (
           <div
             className="card m-5 hover-overlay shadow-lg p-3 mb-5 bg-body rounded "
             style={{ minWidth: "250px", cursor: "pointer" }}
@@ -39,6 +48,16 @@ function Card() {
                 </p>
               </div>
             </div>
+            <div style={{'display':"flex"}}>
+              <p style={{'margin':'10px'}} onClick={()=>handleDelete(obj.id)}> 
+                <i className="fa-solid fa-trash"></i>
+              </p>
+              <p style={{'margin':'10px'}} onClick={()=>handleEdit(obj.id)}>
+                <i className="fa-solid fa-pen-to-square"></i>
+              </p>
+            </div>
+            <>
+            </>
             <div className="card-footer">
               <small className="text-muted">Recently</small>
             </div>

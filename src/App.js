@@ -1,7 +1,9 @@
 // import axios from "axios";
 // import { useEffect, useState } from "react";
 import Card from "./Components/Card";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+// import { BrowserRouter } from "react-router-dom";
+
 import Album from "./Components/Album";
 // import { useSelector, useDispatch } from "react-redux";
 import { fetchPosts } from "./feature/counterSlice";
@@ -18,12 +20,12 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Card />} />
-          <Route path="/add" element={<Album />} />
-        </Routes>
-      </BrowserRouter>
+      {/* <BrowserRouter> */}
+      <Routes>
+        <Route path="/" element={<Card />} />
+        <Route path="/add" element={<Album />} />
+      </Routes>
+      {/* </BrowserRouter> */}
     </div>
   );
 }
